@@ -19,9 +19,9 @@ public class EmployeeRepository implements AppRepository<Employee> {
         String sql = "INSERT INTO employee (name, position, phone) VALUES (?, ?, ?)";
         try (Connection connection = DBConn.connect();
              PreparedStatement ps = connection.prepareStatement(sql)) {
-            ps.setString(1, employee.getEmployeeName());
+            ps.setString(1, employee.getName());
             ps.setString(2, employee.getPosition());
-            ps.setString(3, employee.getPhoneNumber());
+            ps.setString(3, employee.getPhone());
             ps.executeUpdate();
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, e.getMessage(), e);
@@ -75,10 +75,10 @@ public class EmployeeRepository implements AppRepository<Employee> {
         String sql = "UPDATE employee SET name = ?, position = ?, phone = ? WHERE id = ?";
         try (Connection connection = DBConn.connect();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            preparedStatement.setString(1, employee.getEmployeeName());
+            preparedStatement.setString(1, employee.getName());
             preparedStatement.setString(2, employee.getPosition());
-            preparedStatement.setString(3, employee.getPhoneNumber());
-            preparedStatement.setLong(4, employee.getEmployeeId());
+            preparedStatement.setString(3, employee.getPhone());
+            preparedStatement.setLong(4, employee.getId());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             LOGGER.log(Level.WARNING, e.getMessage(), e);
