@@ -5,5 +5,5 @@ CREATE DATABASE demo_db;
        name VARCHAR(128) NOT NULL,
            position VARCHAR(128) NOT NULL,
            phone VARCHAR(128) NOT NULL,
-           PRIMERY KEY(id)
+           PRIMARY KEY(id)
            );
