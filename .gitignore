@@ -3,6 +3,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .idea/
+.conf/
+.logs/
+.webapps
+.work/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

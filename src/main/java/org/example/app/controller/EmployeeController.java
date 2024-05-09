@@ -45,8 +45,8 @@ public class EmployeeController extends HttpServlet {
     }
 
     private void read(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Employee> employeeList = employeeRepository.read();
-        req.setAttribute("employeeList", employeeList);
+        List<Employee> listEmployee = employeeRepository.read();
+        req.setAttribute("listEmployee", listEmployee);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("pages/employee_list.jsp");
         requestDispatcher.forward(req, resp);
     }
