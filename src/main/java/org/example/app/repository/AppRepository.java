@@ -7,5 +7,5 @@ public interface AppRepository <T>{
     List<T> read();
     T readById(Long id);
     void update(T odj);
-    void delete(T odj);
+    void delete(Long id);
 }
