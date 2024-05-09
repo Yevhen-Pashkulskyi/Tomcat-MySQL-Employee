@@ -55,7 +55,7 @@
         <!-- <a href="<%=request.getContextPath()%>/new">Add New Employee</a> -->
             <a href="<%=request.getContextPath()%>/new" class="greenButton">Add Employee</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="<%=request.getContextPath()%>/list">List Employees</a>
+            <a href="<%=request.getContextPath()%>/list" class="blueButton" >List Employees</a>
         </h3>
     </center>
     <div align="center">

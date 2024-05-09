@@ -47,7 +47,7 @@ public class EmployeeController extends HttpServlet {
     private void read(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Employee> employeeList = employeeRepository.read();
         req.setAttribute("employeeList", employeeList);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/webapp/pages/employee_list.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("pages/employee_list.jsp");
         requestDispatcher.forward(req, resp);
     }
 
@@ -68,14 +68,14 @@ public class EmployeeController extends HttpServlet {
     }
 
     private void showNewForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/webapp/pages/employee_form.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("pages/employee_form.jsp");
         dispatcher.forward(req, resp);
     }
 
     private void showEditForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Long id = Long.parseLong(req.getParameter("id"));
         Employee existingEmployee = employeeRepository.readById(id);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/webapp/pages/employee_form.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("pages/employee_form.jsp");
         req.setAttribute("employee", existingEmployee);
         dispatcher.forward(req, resp);
     }

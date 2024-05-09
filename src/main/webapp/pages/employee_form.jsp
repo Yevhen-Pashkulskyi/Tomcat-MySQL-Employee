@@ -59,7 +59,7 @@
                 <th>Name: </th>
                 <td>
                     <input type="text" name="name" size="45"
-                            value="<c:out value='${employee.title}' />"
+                            value="<c:out value='${employee.name}' />"
                         />
                 </td>
             </tr>
@@ -67,15 +67,15 @@
                 <th>Position: </th>
                 <td>
                     <input type="text" name="position" size="45"
-                            value="<c:out value='${employee.author}' />"
+                            value="<c:out value='${employee.position}' />"
                     />
                 </td>
             </tr>
             <tr>
                 <th>Phone: </th>
                 <td>
-                    <input type="text" name="phone" size="5"
-                            value="<c:out value='${employee.price}' />"
+                    <input type="text" name="phone" size="45"
+                            value="<c:out value='${employee.phone}' />"
                     />
                 </td>
             </tr>
